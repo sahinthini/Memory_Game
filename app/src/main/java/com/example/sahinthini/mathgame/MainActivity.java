@@ -188,6 +188,113 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //calculation
+    private void calculate(){
+        if(firstCard==secondCard){
+            if(clickedFirst==0){
+                iv_11.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==1){
+                iv_12.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==2) {
+                iv_13.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==3) {
+                iv_14.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==4) {
+                iv_21.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==5) {
+                iv_22.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==6) {
+                iv_23.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==7) {
+                iv_24.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==8) {
+                iv_31.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==9) {
+                iv_32.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==10) {
+                iv_33.setVisibility(View.INVISIBLE);
+            }else  if(clickedFirst==11) {
+                iv_34.setVisibility(View.INVISIBLE);
+            }
+
+            if(clickedSecond==0){
+                iv_11.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==1){
+                iv_12.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==2) {
+                iv_13.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==3) {
+                iv_14.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==4) {
+                iv_21.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==5) {
+                iv_22.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==6) {
+                iv_23.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==7) {
+                iv_24.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==8) {
+                iv_31.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==9) {
+                iv_32.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==10) {
+                iv_33.setVisibility(View.INVISIBLE);
+            }else  if(clickedSecond==11) {
+                iv_34.setVisibility(View.INVISIBLE);
+            }
+
+            if(turn==1){
+                playerPoints++;
+                tv_p1.setText("p1: " + playerPoints);
+            }else if(turn==2){
+                cpuPoints++;
+                tv_p2.setText("p2: " + cpuPoints);
+            }
+        }else{
+            iv_11.setImageResource(R.drawable.download);
+            iv_12.setImageResource(R.drawable.download);
+            iv_13.setImageResource(R.drawable.download);
+            iv_14.setImageResource(R.drawable.download);
+            iv_21.setImageResource(R.drawable.download);
+            iv_22.setImageResource(R.drawable.download);
+            iv_23.setImageResource(R.drawable.download);
+            iv_24.setImageResource(R.drawable.download);
+            iv_31.setImageResource(R.drawable.download);
+            iv_32.setImageResource(R.drawable.download);
+            iv_33.setImageResource(R.drawable.download);
+            iv_34.setImageResource(R.drawable.download);
+
+            //change the player turn
+            if(turn==1){
+                turn=2;
+                tv_p1.setTextColor(Color.GRAY);
+                tv_p2.setTextColor(Color.BLACK);
+            }else if(turn==2){
+                turn=1;
+                tv_p2.setTextColor(Color.GRAY);
+                tv_p1.setTextColor(Color.BLACK);
+            }
+
+        }
+
+        iv_11.setEnabled(true);
+        iv_12.setEnabled(true);
+        iv_13.setEnabled(true);
+        iv_14.setEnabled(true);
+        iv_21.setEnabled(true);
+        iv_22.setEnabled(true);
+        iv_23.setEnabled(true);
+        iv_24.setEnabled(true);
+        iv_31.setEnabled(true);
+        iv_32.setEnabled(true);
+        iv_33.setEnabled(true);
+        iv_34.setEnabled(true);
+
+        //check if the game is over
+        checkEnd();
+    }
+
+
 
 
 
