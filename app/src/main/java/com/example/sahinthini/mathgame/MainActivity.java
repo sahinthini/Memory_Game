@@ -187,6 +187,81 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //doshuff
+
+
+
+    private void doshuff(ImageView iv,int card){
+        if(cardsArray[card]==101){
+            iv.setImageResource(image101);
+        }else if(cardsArray[card]==102){
+            iv.setImageResource(image102);
+        }else if(cardsArray[card]==103){
+            iv.setImageResource(image103);
+        }else if(cardsArray[card]==104){
+            iv.setImageResource(image104);
+        }else if(cardsArray[card]==105){
+            iv.setImageResource(image105);
+        }else if(cardsArray[card]==106){
+            iv.setImageResource(image106);
+        }else if(cardsArray[card]==201){
+            iv.setImageResource(image201);
+        }else if(cardsArray[card]==202){
+            iv.setImageResource(image202);
+        }else if(cardsArray[card]==203){
+            iv.setImageResource(image203);
+        }else if(cardsArray[card]==204){
+            iv.setImageResource(image204);
+        }else if(cardsArray[card]==205){
+            iv.setImageResource(image205);
+        }else if(cardsArray[card]==206){
+            iv.setImageResource(image206);
+        }
+
+        if(cardNumber==1)
+        {
+            firstCard=cardsArray[card];
+            if(firstCard > 200){
+                firstCard=firstCard-100;
+            }
+            cardNumber=2;
+            clickedFirst=card;
+            iv.setEnabled(false);
+        }else if(cardNumber==2){
+            secondCard=cardsArray[card];
+            if(secondCard > 200){
+                secondCard=secondCard-100;
+            }
+            cardNumber=1;
+            clickedSecond=card;
+
+            iv_11.setEnabled(false);
+            iv_12.setEnabled(false);
+            iv_13.setEnabled(false);
+            iv_14.setEnabled(false);
+            iv_21.setEnabled(false);
+            iv_22.setEnabled(false);
+            iv_23.setEnabled(false);
+            iv_24.setEnabled(false);
+            iv_31.setEnabled(false);
+            iv_32.setEnabled(false);
+            iv_33.setEnabled(false);
+            iv_34.setEnabled(false);
+
+            android.os.Handler handler = new android.os.Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //check if the selected images are equal
+                    calculate();
+                }
+            },1000);
+
+        }
+
+
+    }
+
 
     //calculation
     private void calculate(){
